@@ -71,9 +71,6 @@ def lily_generate(pixiv_token):
         else:
             # 如果这一页全是组图（概率很低），就保底选第一张
             illust = json_result.illusts[0]
-
-    if json_result.illusts:
-        illust = random.choice(json_result.illusts)
     else:
         return None
 
