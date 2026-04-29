@@ -64,7 +64,7 @@ def pic_generate(random_number, search_word, pixiv_token):
 
     if json_result.illusts:
         # 1. 使用列表推导式，筛选出只有 1 页的作品
-        single_pics = [i for i in json_result.illusts if i.page_count == 1 and i.illust_ai_type == 1] 
+        single_pics = [i for i in json_result.illusts if i.page_count == 1 and i.illust_ai_type == 1]
         if single_pics:
             # 2. 从筛选后的单图列表中随机选一张
             illust = random.choice(single_pics)
@@ -100,4 +100,3 @@ def scenery_generate(pixiv_token):
 
 if __name__ == "__main__":
     scenery_generate("")
-
