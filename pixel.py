@@ -74,7 +74,8 @@ def pic_generate(random_number, search_word, pixiv_token):
             illust = json_result.illusts[0]
             api.download(illust["meta_pages"][0]["image_urls"]["original"], path = SAVE_DIR, name = file_name)
         if illust:
-            print(illust)
+            pass
+            # print(illust)
         else:
             print("Something wrong here")
 
@@ -97,6 +98,12 @@ def scenery_generate(pixiv_token):
     a function to generate scenery-pics by using pic-generate func
     """
     return pic_generate(1000, "風景 1000users入り -R-18 -漫画", pixiv_token)
+def tickle_generate(pixiv_token):
+    """
+    a function to generate tk-pics by using pic-generate func
+    Only for personal use, not going to put it in the lily-bot
+    """
+    return pic_generate(200, "tickle -漫画", pixiv_token)
 
 if __name__ == "__main__":
-    scenery_generate("")
+    tickle_generate("HX-4Pdb-D5_ORZff5yqxLD9oawEu9N2E_8y_iegEBdE")
